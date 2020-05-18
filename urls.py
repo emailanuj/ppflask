@@ -13,5 +13,13 @@ def hello_param(name):
 def hello_multi_param(name,id):
    return 'Hello '+name+' your id is '+str(id)
 
+@app.route('/get',methods=['GET'])
+def allow_get_only():
+   return 'Hello from get'
+
+@app.route('/getorpost',methods=['GET','POST'])
+def allow_get_and_post():
+   return 'Hello from get'
+
 if __name__ == '__main__':
    app.run()
