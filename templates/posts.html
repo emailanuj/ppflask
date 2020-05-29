@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block head %}
+<title> Posts Demo </title>
+{% endblock %}
+{% block body %}
+<h1>All Posts</h1>
+    {% for post in post_list %}
+        <h3>{{ post.title }}</h3>
+        <h4 style="color:green;">{{ post.description }}</h4>
+    {% endfor %}
+{% endblock %}
